@@ -7,3 +7,4 @@ class Project < ApplicationRecord
   validates :category, presence: true
   has_many_attached :photos
 end
+

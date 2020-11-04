@@ -10,9 +10,16 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
+@import "pages/index_clips";
 
 
 body {
   background-color: black;
+  color: white;
 }
+
+.container {
+  width: 700px;
+  margin: auto;
+}
+
