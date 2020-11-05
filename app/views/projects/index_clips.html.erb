@@ -1,8 +1,17 @@
-<div class="clips-container">
-  <% @clips.each do |project| %>
-    <div class="clip">
-      <h2><%= project.name %></h2>
-      <%= image_tag project.photos[0] %>
-    </div>
-  <% end %>
+<div class="container">
+<h1 class='title-clip'>Music Videos</h1>
+  <div class="row">
+    <% @clips.each do |clip| %>
+      <div class="col-12 col-mt-6 col-lg-6">
+        <div class="clip" style="background-image: url('<%= rails_blob_url(clip.photos.first) %>')">
+          <div class="background-filter">
+            <div class="clip-content">
+              <p><%= clip.name %></p>
+              <p><%= clip.artist %></p>                      
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
