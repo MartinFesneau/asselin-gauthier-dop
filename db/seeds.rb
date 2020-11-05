@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 projects = [["clip", "https://www.youtube.com/watch?v=p-RDyY6b47k" , "Jamais" , "Tessa B" , "Remi Danino" , "Dissidence Production"],
 
@@ -19,13 +20,17 @@ projects = [["clip", "https://www.youtube.com/watch?v=p-RDyY6b47k" , "Jamais" , 
 puts "starting seed"
 
 projects.each do |project|
-  Project.create(
+  projet = Project.new(
     category: project[0],
     url: project[1],
     name: project[2],
     artist: project[3],
     director: project[4],
     producer: project[5])
+  
+  file = URI.open('https://source.unsplash.com/random/800x600')
+  projet.photos.attach(io: file, filename: "cover", content_type: 'image/jpeg')
+  projet.save!
 end
 
 puts 'end of seed'

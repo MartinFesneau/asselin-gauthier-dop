@@ -1,0 +1,14 @@
+// Import page-specific CSS files here.
+@import "home";
+
+
+.clips-container {
+  width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin: auto;
+}
+.clip img {
+  width: 450px;
+}

@@ -1,0 +1,8 @@
+<div class="clips-container">
+  <% @clips.each do |project| %>
+    <div class="clip">
+      <h2><%= project.name %></h2>
+      <%= image_tag project.photos[0] %>
+    </div>
+  <% end %>
+</div>
