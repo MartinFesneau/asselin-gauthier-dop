@@ -13,13 +13,22 @@
 .navbar-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   h2 {
-    margin-right: 8px;
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
 .navbar-content  {
+  ul {
+    margin-bottom: 0;
+  }
   ul > li {
     display: inline-block;
   }
