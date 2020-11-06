@@ -2,7 +2,7 @@
 <h1 class='title-clip'>Music Videos</h1>
   <div class="row">
     <% @clips.each do |clip| %>
-      <div class="col-12 col-mt-6 col-lg-6">
+      <div class="col-12 col-mt-8 col-lg-6 col-xl-6">
         <div class="clip" style="background-image: url('<%= rails_blob_url(clip.photos.first) %>'); background-size: cover;">
           <div class="background-filter">
             <div class="clip-content">
