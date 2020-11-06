@@ -3,6 +3,8 @@
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
   </ol>
   <div class="carousel-inner ">
     <div class="carousel-item active ">
@@ -28,7 +30,29 @@
       </div>
     </div>
     <div class="carousel-item ">
-      <%= image_tag "jcvd.jpg", class:"d-block w-100", alt:"Third slide" %>
+      <%= image_tag "3.jpg", class:"d-block w-100", alt:"Third slide" %>
+      <div class="carousel-caption d-none d-md-block">
+        <p>ASSELIN GAUTHIER</p>
+        <p>Director of photography</p>
+          <div class="caption-index">
+            <%= link_to "Music Videos", musicvideos_path, class: "nav-link" %>
+            <%= link_to "Commercials", "#", class: "nav-link" %>
+          </div>
+      </div>
+    </div>
+    <div class="carousel-item ">
+      <%= image_tag "4.jpg", class:"d-block w-100", alt:"Third slide" %>
+      <div class="carousel-caption d-none d-md-block">
+        <p>ASSELIN GAUTHIER</p>
+        <p>Director of photography</p>
+          <div class="caption-index">
+            <%= link_to "Music Videos", musicvideos_path, class: "nav-link" %>
+            <%= link_to "Commercials", "#", class: "nav-link" %>
+          </div>
+      </div>
+    </div>
+    <div class="carousel-item ">
+      <%= image_tag "5.jpg", class:"d-block w-100", alt:"Third slide" %>
       <div class="carousel-caption d-none d-md-block">
         <p>ASSELIN GAUTHIER</p>
         <p>Director of photography</p>
