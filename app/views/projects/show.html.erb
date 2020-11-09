@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="arrow-back">
+        <%= link_to musicvideos_path do%>
+            <i class="fas fa-arrow-left"></i>
+        <% end %>
+      <div class="content">
+        <h1><%= @project.artist %> / <%= @project.name %></h1>
+        <h3>Réalisé par <%= @project.director %></h3>
+        <h3>Produit par <%= @project.producer %></h3>
+        <iframe src="https://www.youtube.com/embed/hpGNRHdNSDU" frameborder="0"></iframe>
+      </div>
+      
+      
+      </div>
+    
+    </div>
+  </div>
+</div>

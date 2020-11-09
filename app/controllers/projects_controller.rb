@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index_clips]
+  skip_before_action :authenticate_user!, only: [:index_clips, :show]
 
   def new
     @project = Project.new
@@ -20,6 +20,10 @@ class ProjectsController < ApplicationController
     @clips = Project.where(category: "clip").reverse
   end
 
+  def show
+    @project = Project.find(params[:id])
+    @project.video_id = extract_id(@project.url)
+  end
 
   private 
 
@@ -28,5 +32,11 @@ class ProjectsController < ApplicationController
       :category, :url, :artist, :name, 
       :director, :producer, photos: []
     )
+  end
+
+  def extract_id(url)
+    source_regexp = /(\A.{5}:\/\/w{3}.(?<source>[a-z]*).*=(?<youtube_id>.*)|\A.{5}:\/\/.{9}\/(?<vimeo_id>.*))/
+    match_data = url.strip.match(source_regexp)
+    match_data[:source] == "youtube" ? video_id = match_data[:youtube_id] : video_id = match_data[:vimeo_id]
   end
 end
