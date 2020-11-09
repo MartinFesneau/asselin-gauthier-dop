@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 .carousel-item {
   height: 100vh;
+  object-fit: cover;
 }
 
 .carousel-caption {
@@ -29,7 +30,7 @@
 
   .nav-link {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
   }
   .nav-link:first-child {
     margin-right: 56px;
