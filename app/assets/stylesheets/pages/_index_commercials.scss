@@ -1,11 +1,11 @@
 @import "home";
 
-.title-clip {
+.title-commercial {
   text-align: center;
   margin-bottom: 8px;
   margin-top: 8px;
 }
-.clip {
+.commercial {
   // margin-right: 48px;
   margin-bottom: 32px;
   width: 100%;
@@ -19,11 +19,11 @@
     cursor: pointer;
     transition: all 0.5s ease;
 
-    .clip-content {
+    .commercial-content {
       opacity: 1;
     }
   }
-    .clip-content {
+    .commercial-content {
       display: flex;
       justify-content: center;
       align-items: center;

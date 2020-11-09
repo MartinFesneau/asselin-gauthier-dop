@@ -1,0 +1,20 @@
+<div class="container">
+<h1 class='title-commercial'>Commercials</h1>
+  <div class="row">
+    <% @commercials.each do |commercial| %>
+      <div class="col-12 col-mt-8 col-lg-6 col-xl-6">
+        <div class="commercial" style="background-image: url('<%= rails_blob_url(commercial.photos.first) %>'); background-size: cover;" 
+          alt="<% commercial.name + " " + commercial.artist%>">
+          <%= link_to project_path(commercial) do  %>
+            <div class="background-filter">
+              <div class="commercial-content">
+                <p><%= commercial.name %></p>
+                <p><%= commercial.artist %></p>                      
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

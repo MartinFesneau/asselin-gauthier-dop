@@ -20,6 +20,10 @@ class ProjectsController < ApplicationController
     @clips = Project.where(category: "clip").reverse
   end
 
+  def index_commercials
+    @commercials = Project.where(category: "pub").reverse
+  end
+
   def show
     @project = Project.find(params[:id])
     @project.url = urlify(@project.url)
