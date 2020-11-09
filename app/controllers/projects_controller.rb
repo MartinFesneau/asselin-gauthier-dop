@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
   end
 
   def index_clips
-    @clips = Project.where(category: "clip")
+    @clips = Project.where(category: "clip").reverse
   end
 
 
