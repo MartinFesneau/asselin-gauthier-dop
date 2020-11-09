@@ -8,13 +8,18 @@
 
   <div class="navbar-content">
     <ul>
-      <li class="nav-item active">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+          <%= link_to "Add a project", new_project_path, class: "nav-link" %>
+      </li>
+      <% end %>
+      <li class="nav-item">
           <%= link_to "Music Videos", musicvideos_path, class: "nav-link" %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
           <%= link_to "Commercials", "#", class: "nav-link" %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
           <%= link_to "Contact", "#", class: "nav-link" %>
       </li>
     </ul>
