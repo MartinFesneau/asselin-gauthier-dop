@@ -3,13 +3,16 @@
   <div class="row">
     <% @clips.each do |clip| %>
       <div class="col-12 col-mt-8 col-lg-6 col-xl-6">
-        <div class="clip" style="background-image: url('<%= rails_blob_url(clip.photos.first) %>'); background-size: cover;">
-          <div class="background-filter">
-            <div class="clip-content">
-              <p><%= clip.name %></p>
-              <p><%= clip.artist %></p>                      
+        <div class="clip" style="background-image: url('<%= rails_blob_url(clip.photos.first) %>'); background-size: cover;" 
+          alt="<% clip.name + " " + clip.artist%>">
+          <%= link_to project_path(clip) do  %>
+            <div class="background-filter">
+              <div class="clip-content">
+                <p><%= clip.name %></p>
+                <p><%= clip.artist %></p>                      
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       </div>
     <% end %>
