@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  get '/musicvideos', to: 'projects#index_clips'
+  get '/music_videos', to: 'projects#index_clips'
   get '/commercials', to: 'projects#index_commercials'
 
   resources :projects, only: [:new, :index_clip, :index_commercials, :create, :show]
