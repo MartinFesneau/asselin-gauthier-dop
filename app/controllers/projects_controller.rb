@@ -22,21 +22,41 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @project.video_id = extract_id(@project.url)
+    @project.url = urlify(@project.url)
   end
 
   private 
 
   def project_params
     params.require(:project).permit(
-      :category, :url, :artist, :name, 
+      :category, :format , :url, :artist, :name, 
       :director, :producer, photos: []
     )
   end
 
+  def regexpify(url)
+    regexp = /(\A.{11}.(?<source>[a-z]*).*=(?<youtube_id>.*)&|\A.{5}:\/\/.{9}\/(?<vimeo_id>.*))/
+    match_data = url.strip.match(regexp)
+  end
+  
+  def extract_source(url)
+    match_data = regexpify(url)
+    source = match_data[:source]
+  end
+  
   def extract_id(url)
-    source_regexp = /(\A.{5}:\/\/w{3}.(?<source>[a-z]*).*=(?<youtube_id>.*)|\A.{5}:\/\/.{9}\/(?<vimeo_id>.*))/
-    match_data = url.strip.match(source_regexp)
-    match_data[:source] == "youtube" ? video_id = match_data[:youtube_id] : video_id = match_data[:vimeo_id]
+    match_data = regexpify(url)
+    source = extract_source(url)
+    source == "youtube" ? video_id = match_data[:youtube_id] : video_id = match_data[:vimeo_id]
+  end
+  
+  def urlify(url)
+    source = extract_source(url)
+    video_id = extract_id(url)
+    if source == "youtube"
+      url = "https://www.youtube.com/embed/#{video_id}"
+    else
+      url = "https://player.vimeo.com/video/#{video_id}"
+    end
   end
 end
