@@ -1,7 +1,7 @@
 <div class="navbar">
   <div class="navbar-title">
   <%= link_to root_path do  %>
-    <h2>ASSELIN GAUTHIER</h2>
+    <h2 class="hvr-underline-reveal">ASSELIN GAUTHIER</h2>
   <% end %>
   <p>Chef opérateur | Director of photography</p>
   </div>
@@ -10,17 +10,17 @@
     <ul>
       <% if user_signed_in? && current_user.admin == true %>
       <li class="nav-item">
-          <%= link_to "Add a project", new_project_path, class: "nav-link" %>
+          <%= link_to "Add a project", new_project_path, class: "nav-link hvr-underline-reveal" %>
       </li>
       <% end %>
       <li class="nav-item">
-          <%= link_to "Music Videos", music_videos_path, class: "nav-link" %>
+          <%= link_to "Music Videos", music_videos_path, class: "nav-link hvr-underline-reveal" %>
       </li>
       <li class="nav-item">
-          <%= link_to "Commercials", commercials_path, class: "nav-link" %>
+          <%= link_to "Commercials", commercials_path, class: "nav-link hvr-underline-reveal" %>
       </li>
       <li class="nav-item">
-          <%= link_to "Contact", "#", class: "nav-link" %>
+          <%= link_to "Contact", "#", class: "nav-link hvr-underline-reveal" %>
       </li>
     </ul>
   </div>
