@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index_clips, :show]
+  skip_before_action :authenticate_user!, only: [:index_clips, :index_commercials, :show]
 
   def new
     @project = Project.new
@@ -27,6 +27,20 @@ class ProjectsController < ApplicationController
     @project.url = urlify(@project.url)
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+  
+  def update
+    @project = Project.find(params[:id])
+    @project.update(project_params)
+    if @project.save
+      redirect_to project_path(@project)
+    else
+      render :new
+    end
+  end
+  
   private 
 
   def project_params
