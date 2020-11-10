@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div class="con-form">
+        <h1 class="title mb-3">Add a new project</h1>
+        <%= simple_form_for @project do |f| %>
+          <%= f.input :category, as: :radio_buttons, collection: ["pub", "clip"], wrapper: :vertical_collection_inline %>
+          <%= f.input :format, as: :radio_buttons, collection: Project::FORMAT, wrapper: :vertical_collection_inline  %>
+          <%= f.input :artist, placeholder: "Artist or brand", input_html: { class: "default-input" } %>
+          <%= f.input :name, placeholder: "Title", input_html: { class: "default-input" } %>
+          <%= f.input :director, placeholder: "Director", input_html: { class: "default-input" } %>
+          <%= f.input :producer, placeholder: "Producer", input_html: { class: "default-input" } %>
+          <%= f.input :url, label:"URL Youtube/Vimeo", placeholder: "URL Youtube/Vimeo", input_html: { class: "default-input" } %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.submit class: "btn btn-primary w-100" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
