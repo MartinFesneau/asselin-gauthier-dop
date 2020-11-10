@@ -40,6 +40,17 @@ class ProjectsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    @project = Project.find(params[:id])
+    clip = @project.category == "clip"
+    @project.delete
+    if clip 
+      redirect_to music_videos_path
+    else
+      redirect_to commercials_path
+    end
+  end
   
   private 
 
