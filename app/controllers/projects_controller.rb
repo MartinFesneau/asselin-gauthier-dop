@@ -45,7 +45,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     clip = @project.category == "clip"
     @project.delete
-    redirect_to root_path
+    clip ? redirect_to music_videos_path : redirect_to commercials_path
   end
   
   private 

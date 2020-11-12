@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get '/music_videos', to: 'projects#index_clips'
   get '/commercials', to: 'projects#index_commercials'
 
-  resources :projects, only: [:new, :index_clip, :index_commercials, :create, :show, :edit, :update]
+  resources :projects, only: [:new, :index_clip, :index_commercials, :create, :show, :edit, :update, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
