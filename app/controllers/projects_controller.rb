@@ -62,7 +62,11 @@ class ProjectsController < ApplicationController
   end
 
   def regexpify(url)
-    regexp = /(\A.{11}.(?<source>[a-z]*).*=(?<youtube_id>.*)&|\A.{5}:\/\/.{9}\/(?<vimeo_id>.*))/
+    if url.include?"&"
+      index = url.index("&")
+      url.slice!(index..-1)
+    end
+    regexp = /(\A.{11}.(?<source>[a-z]*).*=(?<youtube_id>.*)|\A.{5}:\/\/.{9}\/(?<vimeo_id>.*))/
     match_data = url.strip.match(regexp)
   end
   
