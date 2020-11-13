@@ -5,32 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-uri'
-
-projects = [["clip", "https://www.youtube.com/watch?v=p-RDyY6b47k" , "Jamais" , "Tessa B" , "Remi Danino" , "Dissidence Production"],
-
-["clip","https://vimeo.com/317245732 ","Mercutio","Sean","Nathan Almeras","Dissidence Production"],
-
-["clip"," https://www.youtube.com/watch?v=hpGNRHdNSDU","Mechant","Niska feat. Ninho","Liswaya","Glitch Paris"],
-
-["pub","https://vimeo.com/443420902","Ready For Football","A.D.I.D.A.S.","William S. Touitou","When We Were Kids"],
-
-["clip","https://vimeo.com/364310814","Trigger","Form","Yanis & Mehdi Hamnane","Dissidence Production"]]
-
 puts "starting seed"
 
-projects.each do |project|
+index = 1
+20.times do
   projet = Project.new(
-    category: project[0],
-    url: project[1],
-    name: project[2],
-    artist: project[3],
-    director: project[4],
-    producer: project[5])
+    category: "clip",
+    format: "16by9",
+    url: "https://vimeo.com/354045295",
+    name: "project#{index}",
+    artist: "artist project #{index}",
+    director: "someone",
+    producer: "don't know")
   
   file = URI.open('https://source.unsplash.com/random/800x600')
   projet.photos.attach(io: file, filename: "cover", content_type: 'image/jpeg')
   projet.save!
+  puts projet.name
+  index += 1
 end
 
 puts 'end of seed'

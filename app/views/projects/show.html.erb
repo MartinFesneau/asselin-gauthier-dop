@@ -19,14 +19,14 @@
   </div>
   <div class="row">
     <% @project.photos.each do |photo| %>
-      <div class="col-12">
+      <div class="col-12" data-aos="fade-in">
         <div class="screenshot">
         <%= cl_image_tag photo.key, alt: @project.name + " " + @project.artist %>
         </div>
       </div>
     <% end %>
   </div>
-  <% if current_user.admin? %>
+  <% if user_signed_in? && current_user.admin? %>
     <div class="row flex-column align-items-center">
         <%= link_to "Edit this project", edit_project_path(@project.id), class: "btn btn-secondary"  %>
         <%= link_to project_path(@project.id),
