@@ -2,7 +2,7 @@
 <h1 class='title-commercial'>Commercials</h1>
   <div class="row">
     <% @commercials.each do |commercial| %>
-      <div class="col-12 col-mt-8 col-lg-6 col-xl-6">
+      <div class="col-12 col-mt-8 col-lg-6 col-xl-6" data-aos="fade-in">
         <div class="commercial" style="background-image: url('<%= cl_image_path commercial.photos.first.key %>'); background-size: cover;" 
           alt="<% commercial.name + " " + commercial.artist%>">
           <%= link_to project_path(commercial) do  %>
