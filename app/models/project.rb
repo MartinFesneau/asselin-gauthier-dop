@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-  FORMAT = ["21by9", "16by9", "4by3", "1by1"]
+  FORMAT = ["21by9", "16by9", "4by3", "1by1", "2,35by1"]
   validates :url, presence: true  
   validates :name, presence: true  
   validates :artist, presence: true  

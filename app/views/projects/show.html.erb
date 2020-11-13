@@ -6,10 +6,10 @@
             <i class="fas fa-arrow-left"></i>
         <% end %>
       </div>
-      <div class="content text-center">
-        <h1><%= @project.artist %> / <%= @project.name %></h1>
-        <h3>Réalisé par <%= @project.director %></h3>
-        <h3>Produit par <%= @project.producer %></h3>
+      <div class="project-content text-center">
+        <h1 class="title"><%= @project.artist %> / <%= @project.name %></h1>
+        <h2 class="title">Réalisé par <%= @project.director %></h2>
+        <h2 class="title">Produit par <%= @project.producer %></h2>
 
         <div class="embed-responsive embed-responsive-<%= @project.format %> mb-4">
           <iframe src="<%= @project.url %>" allowfullscreen></iframe>
