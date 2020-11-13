@@ -8,5 +8,8 @@ class Project < ApplicationRecord
   validates :format, presence: true
   validates :category, presence: true
   has_many_attached :photos
+
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 end
 
