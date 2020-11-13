@@ -15,7 +15,11 @@
   padding: 0px 10px;
 
     &:hover {
-      color: yellow;
+      -webkit-text-stroke: 1px;
     }
   }
+}
+
+.footer-links:hover > a:not(:hover) {
+  opacity: 0.6;
 }
