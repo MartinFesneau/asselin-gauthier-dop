@@ -62,10 +62,12 @@ class ProjectsController < ApplicationController
   end
 
   def regexpify(url)
+    # delete the channel part of the youtube url if necessary, maybe possible to do it in the regexp
     if url.include?"&"
       index = url.index("&")
       url.slice!(index..-1)
     end
+    # regexp to indetify the source (youtube or vimeo) and the video id
     regexp = /(\A.{11}.(?<source>[a-z]*).*=(?<youtube_id>.*)|\A.{5}:\/\/.{9}\/(?<vimeo_id>.*))/
     match_data = url.strip.match(regexp)
   end
@@ -82,6 +84,7 @@ class ProjectsController < ApplicationController
   end
   
   def urlify(url)
+    # create the good embed url for the video
     source = extract_source(url)
     video_id = extract_id(url)
     if source == "youtube"
