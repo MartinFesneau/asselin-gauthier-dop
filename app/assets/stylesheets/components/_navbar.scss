@@ -1,20 +1,14 @@
 .navbar {
   background-color: black;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: $primary-font;
 
-  a {
-    color: white;
-
-
-    &:hover {
+  a:hover {
       -webkit-text-stroke: 1px;
+      color: $primary-contrast;
   }
-  
-}
 }
 
 .navbar-title {
@@ -26,26 +20,19 @@
     margin-right: 24px;
     margin-bottom: 0;
     display: inline-block;
+    color: $primary-color;
   }
-
-  h2:after {
-    display:block;
-    content: '';
-    border-bottom: solid 3px white;  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
-  }
-  h2:hover:after { transform: scaleX(1); }
-  h2.fromRight:after{ transform-origin:100% 50%; }
-  h2.fromLeft:after{  transform-origin:  0% 50%; }
-  
 
   p {
     margin-bottom: 0;
+    color: $secondary-color;
   }
 }
 
 .navbar-content  {
+  a {
+    color: $secondary-color;
+  }
   ul {
     margin-bottom: 0;
   }
@@ -72,7 +59,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: white;
+  background: $primary-contrast;
   height: 4px;
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
