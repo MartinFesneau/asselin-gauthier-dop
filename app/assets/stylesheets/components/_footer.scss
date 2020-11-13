@@ -3,9 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 80px;
   padding: 0px 50px;
   color: white;
+
+  p {
+    color: black;
+  }
 }
 .footer-links {
   a {

@@ -3,7 +3,7 @@
   <div class="row">
     <% @clips.each do |clip| %>
       <div class="col-12 col-mt-8 col-lg-6 col-xl-6" data-aos="fade-in">
-        <div class="clip"  style="background-image: url('<%= cl_image_path clip.photos.first.key %>'); background-size: cover;" 
+        <div class="clip"  style="background-image: url('<%= cl_image_path clip.photos.first.key %>')" 
           alt="<% clip.name + " " + clip.artist%>">
           <%= link_to project_path(clip) do  %>
             <div class="background-filter">
