@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get "/contact", to: 'pages#contact'
 
   get '/music_videos', to: 'projects#index_clips'
   get '/commercials', to: 'projects#index_commercials'
