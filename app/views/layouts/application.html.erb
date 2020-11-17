@@ -26,10 +26,15 @@
     <% if params[:action] != "home" %>
       <%= render 'shared/navbar' %>
     <% end %>
+
     <%= render 'shared/flashes' %>
+
     <div class="page-content">
       <%= yield %>
     </div>
-    <%= render 'shared/footer' %>
+    
+    <% if params[:action] != "contact" %>
+      <%= render 'shared/footer' %>
+    <% end %>
   </body>
 </html>
