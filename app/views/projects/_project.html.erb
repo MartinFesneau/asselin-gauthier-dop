@@ -1,0 +1,14 @@
+<div class="col-12 col-mt-8 col-lg-6 col-xl-6" data-aos="fade-in">
+  <div class="commercial" style="background-image: url('<%= cl_image_path project.photos.first.key %>'); background-size: cover;" 
+    alt="<% project.name + " " + project.artist%>">
+      <%= link_to project_path(project) do  %>
+        <div class="background-filter">
+          <div class="commercial-content">
+            <p><%= project.name %></p>
+            <p><%= project.artist %></p>                      
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

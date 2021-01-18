@@ -10,8 +10,16 @@ class Project < ApplicationRecord
   validates :category, presence: true
   has_many_attached :photos
 
+  include PgSearch::Model
+  pg_search_scope :filer_by_category,
+    against: [:category],
+  using: {
+    tsearch: { prefix: true }
+}
+
   extend FriendlyId
   friendly_id :name, use: :slugged
+
 
   class << Project
     def regexpify(url)
