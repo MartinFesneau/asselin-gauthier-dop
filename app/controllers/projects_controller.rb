@@ -14,12 +14,12 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def index_clips
-    @clips = Project.where(category: "clip").reverse
-  end
-
-  def index_commercials
-    @commercials = Project.where(category: "pub").reverse
+  def index 
+    if params[:category].present?
+      @projects = Project.where(category: params[:category])
+    else
+      @projects = Project.all
+    end
   end
 
   def show
@@ -43,13 +43,8 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project = Project.friendly.find(params[:id])
-    clip = @project.category == "clip"
     @project.delete
-    if clip
-      redirect_to music_videos_path
-    else
-      redirect_to commercials_path
-    end
+    redirect_to projects_path
   end
   
   private 
