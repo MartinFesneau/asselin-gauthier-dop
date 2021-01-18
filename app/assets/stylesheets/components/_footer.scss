@@ -18,9 +18,11 @@
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  transition: 0.3s all ease;
 
     &:hover {
-      -webkit-text-stroke: 1px;
+      // -webkit-text-stroke: 1px;
+      transition: 0.5s all ease;
     }
   }
 }
