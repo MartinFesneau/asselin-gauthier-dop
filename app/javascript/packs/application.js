@@ -28,10 +28,12 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { AOSInitializer }  from '../components/aos';
+import { initFilters }  from '../components/filters_active';
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   AOSInitializer();
+  initFilters();
 });
 

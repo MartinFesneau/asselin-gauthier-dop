@@ -1,14 +1,8 @@
-<div class="col-12 col-mt-8 col-lg-6 col-xl-6" data-aos="fade-in">
-  <div class="commercial" style="background-image: url('<%= cl_image_path project.photos.first.key %>'); background-size: cover;" 
-    alt="<% project.name + " " + project.artist%>">
-      <%= link_to project_path(project) do  %>
-        <div class="background-filter">
-          <div class="commercial-content">
-            <p><%= project.name %></p>
-            <p><%= project.artist %></p>                      
-          </div>
-        </div>
-      <% end %>
+<%= link_to project_path(project) do  %>
+  <div class="project-card" style="background-image: url('<%= cl_image_path project.photos.first.key %>'), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));" data-aos="fade-in">
+    <div class="content">
+      <p><%= project.name %></p>
+      <p><%=  project.artist %></p>
     </div>
   </div>
-</div>
+<% end %>

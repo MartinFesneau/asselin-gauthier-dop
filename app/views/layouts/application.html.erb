@@ -29,9 +29,7 @@
 
     <%= render 'shared/flashes' %>
 
-    <div class="page-content">
-      <%= yield %>
-    </div>
+    <%= yield %>
     
     <% if params[:action] != "contact" %>
       <%= render 'shared/footer' %>

@@ -1,13 +1,17 @@
 
+<div class="home-background"></div>
+<div id="anchor"></div>
+<div class="container">
+  <div class="filters">
+      <%= link_to "ALL", projects_path(anchor: "anchor"), anchor: "anchor", class: "#{"active" if params[:category].nil?}" %>
+      <%= link_to "CLIPS", projects_path(category: "clip", anchor: "anchor"), class: "#{"active" if params[:category] == "clip"}" %>
+      <%= link_to "COMMERCIALS", projects_path(category: "pub", anchor: "anchor"), class: "#{"active" if params[:category] == "pub"}"%>
+      <%= link_to "REEL", projects_path(category: "reel", anchor: "anchor"), class: "#{"active" if params[:category] == "reel"}"%>
+  </div>
 
-<div class="container-fluid m-2">
-  <%= link_to "All", projects_path  %>
-  <%= link_to "CLIPS", projects_path(category: "clip")%>
-  <%= link_to "COMMERCIALS", projects_path(category: "pub")%>
-  <%= link_to "REEL", projects_path(category: "reel")%>
-
-  <% @projects.each do |project| %>
-    <%= render "projects/project", project: project %>
-  <% end %>
+  <div class="projects">
+    <% @projects.each do |project| %>
+      <%= render "projects/project", project: project %>
+    <% end %>
+  </div>
 </div>
-

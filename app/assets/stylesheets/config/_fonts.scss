@@ -1,14 +1,19 @@
 // Import Google fonts
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 // -- Typographie --
-$primary-font: 'Poppins', sans-serif;
+@font-face {
+  font-family: 'LFTEtic';
+  src: url("../../fonts/LFTEtica-Regular.otf");
+}
+
+$primary-font: 'LFTEtica', sans-serif;
 
 // -- Fonts weight --
 $regular: 400;
 $semi-bold: 600;
 $bold: 700;
+$light-bold: 300;
 
 // -- Fonts size --
 $h1: 48px;

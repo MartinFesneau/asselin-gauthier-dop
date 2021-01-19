@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "starting seed"
-
+Project.destroy_all
 index = 1
 20.times do
   projet = Project.new(
-    category: "clip",
+    category: ["clip", "pub"].sample,
     format: "16by9",
     url: "https://vimeo.com/354045295",
     name: "project#{index}",
