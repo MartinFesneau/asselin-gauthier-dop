@@ -1,59 +1,19 @@
-// .navbar {
-//   background-color: transparent;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin: 0;
-//   z-index: 3;
-// }
-
-// .navbar-title {
-  
-// }
-
-// .navbar-content  {
-//   a {
-//     color: $primary-color;
-//     font-weight: $light-bold;
-//     font-family: $primary-font;
-//     font-size: 18px;
-//     line-height: 22px;
-//     color: $nav-items-color;
-//     text-decoration: none;
-//     transition: 0.3s all ease;
-//     letter-spacing: 1.17;
-
-//     &:hover {
-//       // -webkit-text-stroke: 1px;
-//       transition: 0.3s all ease;
-//     }
-//   }
-  
-// }
-
-// .navbar-content:hover > a:not(:hover) {
-//   opacity: 0.6;
-// }
-.navbar-lewagon {
+.nav-cont {
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
-  
+}
 
+.navbar-lewagon {
+  width: 100%;
+  z-index: 10;
   .title {
     display: flex;
     flex-direction: column;
   } 
 
   h1 {
-    font-family: $primary-font;
-    font-size: 20px;
-    line-height: 29px;
-    letter-spacing: 2px;
-    margin-bottom: 0;
-    display: inline-block;
-    color: $primary-color;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 8px;
+    
   }
 
   .subtitle {
@@ -84,6 +44,8 @@
   opacity: 0.6;
   text-decoration: none;
   margin-left: 48px;
+  transition: all 0.3s ease;
+  
   &:hover {
     opacity: 1;
     transition: all 0.3s ease;
@@ -101,9 +63,12 @@
 
 .transparent {
   background: transparent;
-  position: absolute;
 }
 
 .normal {
   background: $primary-background;
+}
+
+.fixed {
+  position: fixed;
 }

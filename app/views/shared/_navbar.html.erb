@@ -1,8 +1,8 @@
-<div class="container">
-<div class="mt-3 navbar navbar-expand-sm navbar-light navbar-lewagon <%= params[:action] == 'index' ? "transparent" : "normal" %>">
-  <div class="title">
+<div class="mb-3 navbar navbar-expand-sm navbar-light navbar-lewagon fixed <%= params[:action] == 'index' ? "transparent" : "normal" %>">
+  <div class="nav-cont">
+  <div class="title-cont">
     <%= link_to root_path, class:"active" do  %>
-      <h1>ASSELIN GAUTHIER</h1>
+      <h1 class="title">ASSELIN GAUTHIER</h1>
     <% end %>
     <p class="subtitle">DIRECTOR OF PHOTOGRAPY / CHEF OPERATEUR</p>
   </div>
@@ -22,7 +22,7 @@
         <%= link_to "HOME", root_path  %>
       </li>
       <li class="nav-item">
-        <%= link_to "PROJECTS", root_path(anchor: "anchor") %>
+        <%= link_to "PROJETS", root_path(anchor: "anchor") %>
       </li>
       <li class="nav-item">
         <%= link_to "CONTACT", contact_path %>
@@ -32,6 +32,5 @@
       </li>
     </ul>
   </div>
-</div>
-
+  </div>
 </div>

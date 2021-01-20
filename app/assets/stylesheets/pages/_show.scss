@@ -1,25 +1,53 @@
-.screenshot img {
+.first-image img {
   object-fit: contain;
   width: 100%;
   margin: 2em 0;
-}
-
-.arrow-back i {
-  color: $primary-color;
+  margin-bottom: 16px;
 }
 
 .fa-trash {
   color: red;
 }
 
-.project-content {
-  font-family: $primary-font;
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
 
-  h1 {
-    margin: 0.5em 0;
+  .bold {
+    color: $primary-color;
+    font-weight: bold;
+    margin-left: 12px;
   }
 
-  h2{
-    margin: 1em 0;
+  p {
+    font-family: $primary-font;
+    font-size: 16px;
+    line-height: 19px;
+    color: $subtitle-color;
+
+    
   }
+
+  .artist-details {
+    display: flex;
+    justify-content: space-between;
+
+    .artist {
+      margin-right: 24px;
+    }
+  }
+
+  .prod-details {
+    display: flex;
+    justify-content: space-between;
+    
+    .prod {
+      margin-left: 48px;
+    }
+  }
+}
+
+.carousel {
+  margin-bottom: 48px;
 }

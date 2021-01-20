@@ -20,6 +20,7 @@
     font-size: 20px;
     text-decoration: none;
     opacity: 0.6;
+    transition: 0.3s all ease; 
 
     &:hover {
       // -webkit-text-stroke: 1px;
@@ -46,8 +47,8 @@
     margin: 16px;
 
   }
-  a .subtitle {
-  font-size: 12px !important;
+  .subtitle p {
+  font-size: 11px !important;
   margin-bottom: 16px;
   }
 }

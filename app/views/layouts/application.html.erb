@@ -17,14 +17,12 @@
     <meta property="og:description" content="Chef opérateur à Paris pour l'industrie cinématographique, publicitaire et musicale">
     <meta property="og:site_name" content="Asselin Gauthier - Chef opérateur"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body id="<%= controller_name %>-<%= action_name %>">
     <% if params[:action] != "home" %>
       <%= render 'shared/navbar' %>
     <% end %>
@@ -36,8 +34,5 @@
     <% if params[:action] != "contact" %>
       <%= render 'shared/footer' %>
     <% end %>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
   </body>
 </html>
