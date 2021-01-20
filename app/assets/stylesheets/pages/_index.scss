@@ -1,6 +1,7 @@
 .home-background {
   background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1611053542/vlc_2021-01-19_10-05-55_rhxsrj.jpg");
   height: 100vh;
+  z-index: 0;
 }
 
 .filters {
@@ -30,4 +31,17 @@
 .active {
   // -webkit-text-stroke: 1px;
   opacity: 1 !important;
+}
+
+
+@media(max-width: 576px) {
+  .home-background {
+    height: auto;
+  }
+
+  .filters {
+    flex-direction: column;
+    text-align: left;
+    margin: 16px;
+  }
 }
