@@ -1,13 +1,48 @@
-.navbar {
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  z-index: 3;
-}
+// .navbar {
+//   background-color: transparent;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin: 0;
+//   z-index: 3;
+// }
 
-.navbar-title {
+// .navbar-title {
+  
+// }
+
+// .navbar-content  {
+//   a {
+//     color: $primary-color;
+//     font-weight: $light-bold;
+//     font-family: $primary-font;
+//     font-size: 18px;
+//     line-height: 22px;
+//     color: $nav-items-color;
+//     text-decoration: none;
+//     transition: 0.3s all ease;
+//     letter-spacing: 1.17;
+
+//     &:hover {
+//       // -webkit-text-stroke: 1px;
+//       transition: 0.3s all ease;
+//     }
+//   }
+  
+// }
+
+// .navbar-content:hover > a:not(:hover) {
+//   opacity: 0.6;
+// }
+.navbar-lewagon {
+  justify-content: space-between;
+  
+
+  .title {
+    display: flex;
+    flex-direction: column;
+  } 
+
   h1 {
     font-family: $primary-font;
     font-size: 20px;
@@ -28,30 +63,47 @@
     font-size: 16px;
     line-height: 19px;
     font-weight: $light-bold;
-    letter-spacing: 0;
   }
 }
 
-.navbar-content  {
-  a {
-    color: $primary-color;
-    font-weight: $light-bold;
-    font-family: $primary-font;
-    font-size: 18px;
-    line-height: 22px;
-    color: $nav-items-color;
-    text-decoration: none;
-    transition: 0.3s all ease;
-    letter-spacing: 1.17;
-
-    &:hover {
-      // -webkit-text-stroke: 1px;
-      transition: 0.3s all ease;
-    }
-  }
-  
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
 }
 
-.navbar-content:hover > a:not(:hover) {
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.nav-item a {
+  color: $nav-items-color;
+  font-family: $primary-font;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1.17px;
+  line-height: 22px;
   opacity: 0.6;
+  text-decoration: none;
+  margin-left: 48px;
+  &:hover {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+}
+
+.navbar-toggler-icon {
+  color: white !important;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transparent {
+  background: transparent;
+  position: absolute;
+}
+
+.normal {
+  background: $primary-background;
 }

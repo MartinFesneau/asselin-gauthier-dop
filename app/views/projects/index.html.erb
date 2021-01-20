@@ -3,7 +3,7 @@
 <div id="anchor"></div>
 <div class="container">
   <div class="filters">
-      <%= link_to "ALL", projects_path(anchor: "anchor"), anchor: "anchor", class: "#{"active" if params[:category].nil?}" %>
+      <%= link_to "ALL", projects_path(anchor: "anchor"), class: "#{"active" if params[:category].nil?}" %>
       <%= link_to "CLIPS", projects_path(category: "clip", anchor: "anchor"), class: "#{"active" if params[:category] == "clip"}" %>
       <%= link_to "COMMERCIALS", projects_path(category: "pub", anchor: "anchor"), class: "#{"active" if params[:category] == "pub"}"%>
       <%= link_to "REEL", projects_path(category: "reel", anchor: "anchor"), class: "#{"active" if params[:category] == "reel"}"%>

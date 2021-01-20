@@ -1,24 +1,37 @@
-<div class="navbar">
-  <div class="navbar-title">
-  <%= link_to root_path do  %>
-    <h1>ASSELIN GAUTHIER</h1>
-  <% end %>
-    <p class="subtitle">DIRECTOR OF PHOTOGRAPHY / CHEF OPERATEUR</p>
+<div class="container">
+<div class="mt-3 navbar navbar-expand-sm navbar-light navbar-lewagon <%= params[:action] == 'index' ? "transparent" : "normal" %>">
+  <div class="title">
+    <%= link_to root_path, class:"active" do  %>
+      <h1>ASSELIN GAUTHIER</h1>
+    <% end %>
+    <p class="subtitle">DIRECTOR OF PHOTOGRAPY / CHEF OPERATEUR</p>
   </div>
-  
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="fas fa-bars navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent"">
-    <div class="navbar-content">
-      <% if user_signed_in? && current_user.admin == true %>
-          <%= link_to "ADD A PROJECT", new_project_path, class: "nav-link" %>
-      <% end %>
-      <%= link_to "HOME", root_path, class: "nav-link" %>
-      <%= link_to "PROJECTS", root_path, class: "nav-link" %>
-      <%= link_to "CONTACT", contact_path, class: "nav-link" %>
-      <%= link_to "CV", cv_path, class: "nav-link" %>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <% if user_signed_in? && current_user.admin == true %>
+          <%= link_to "ADD A PROJECT", new_project_path %>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "HOME", root_path  %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "PROJECTS", root_path(anchor: "anchor") %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "CONTACT", contact_path %>
+      </li>
+      <li class="nav-item mr-3">
+        <%= link_to "CV", cv_path %>
+      </li>
+    </ul>
   </div>
+</div>
+
 </div>

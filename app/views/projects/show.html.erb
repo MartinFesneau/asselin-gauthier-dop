@@ -1,15 +1,25 @@
-<div class="container-xl">
+<div class="container">
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
-      <div class="arrow-back">
-        <%= link_to projects_path do%>
-            <i class="fas fa-arrow-left"></i>
-        <% end %>
-      </div>
       <div class="project-content text-center">
-        <h1 class="title"><%= @project.artist %> / <%= @project.name %></h1>
-        <h2 class="title">Réalisé par <%= @project.director %></h2>
-        <h2 class="title">Produit par <%= @project.producer %></h2>
+        <div class="first-image">
+          <%= cl_image_tag @project.photos.first.key %>
+        </div>
+        <div class="project-details">
+          <div class="artist-details">
+            <p class="artist bold"><%= @project.artist %></p>
+            <p class="project"><%= @project.name %></p>
+          </div>
+          <div class="prod-details">
+            <p class="real">Réalisé par <span class="bold"><%= @project.director.upcase %></span></p>
+            <p class="prod">Produit par <span class="bold"><%= @project.producer.upcase %></span></p>
+          </div>
+        </div>
+        
+
+        
+
+
 
         <div class="embed-responsive embed-responsive-<%= @project.format %> mb-4">
           <iframe src="<%= @project.url %>" allowfullscreen></iframe>
@@ -26,6 +36,9 @@
       </div>
     <% end %>
   </div>
+
+
+
   <% if user_signed_in? && current_user.admin? %>
     <div class="row flex-column align-items-center">
         <%= link_to "Edit this project", edit_project_path(@project.id), class: "btn btn-secondary"  %>

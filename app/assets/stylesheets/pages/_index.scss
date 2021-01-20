@@ -8,6 +8,7 @@
   margin: 48px 144px; 
   display: flex;
   justify-content: space-between;
+  position: relative;
   
   a {
     
@@ -43,5 +44,10 @@
     flex-direction: column;
     text-align: left;
     margin: 16px;
+
+  }
+  a .subtitle {
+  font-size: 12px !important;
+  margin-bottom: 16px;
   }
 }

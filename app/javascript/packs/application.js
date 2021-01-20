@@ -29,6 +29,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { AOSInitializer }  from '../components/aos';
 import { initFilters }  from '../components/filters_active';
+import { initSlick }  from '../components/init_slick';
 
 
 document.addEventListener('turbolinks:load', () => {
