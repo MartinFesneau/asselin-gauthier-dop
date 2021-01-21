@@ -13,7 +13,7 @@
           <%= link_to "REEL", projects_path(category: "reel", anchor: "anchor"), class: "#{"active" if params[:category] == "reel"}"%>
       </div>
 
-      <div class="projects">
+      <div class="projects" id="projects">
         <% @projects.each do |project| %>
           <%= render "projects/project", project: project %>
         <% end %>

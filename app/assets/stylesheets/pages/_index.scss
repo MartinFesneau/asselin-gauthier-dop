@@ -4,12 +4,17 @@
   width: 100%;
   z-index: 0;
 }
-
+.projects {
+  padding-top: 48px;
+}
 .filters {
-  margin: 48px 144px; 
   display: flex;
   justify-content: space-between;
-  position: relative;
+  // background-color: $primary-background;
+  // padding: 48px 144px;
+  padding-top: 48px;
+  padding-left: 144px;
+  padding-right: 144px;
   
   a {
     

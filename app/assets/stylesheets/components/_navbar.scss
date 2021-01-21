@@ -1,6 +1,7 @@
 .navbar-lewagon {
   width: 100%;
   z-index: 10;
+  position: absolute;
   .title {
     display: flex;
     flex-direction: column;
@@ -64,5 +65,5 @@
 
 .fixed {
   position: fixed;
-  top: 0;
+  transition: all 0.5s ease;
 }

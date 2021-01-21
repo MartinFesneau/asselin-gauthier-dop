@@ -8,11 +8,10 @@ const initNavbar = () => {
       const bannerHeight = document.querySelector('.home-background').offsetHeight;
       console.log(filtersHeight)
       window.addEventListener('scroll', (e) => {
-        if (window.scrollY >= bannerHeight + filtersHeight * 2) {
+        if (window.scrollY >= bannerHeight - navbar.offsetHeight * 1.5) {
           console.log(bannerHeight)
           navbar.classList.add("normal");
           navbar.classList.remove("transparent");
-
         } else {
           navbar.classList.add("transparent");
           navbar.classList.remove("normal");
