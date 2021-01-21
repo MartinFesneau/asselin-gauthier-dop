@@ -2,20 +2,17 @@ const initNavbar = () => {
 
   if (document.querySelector("#projects-index")) {
     const navbar = document.querySelector('.navbar-lewagon');
-    console.log(navbar)
     
     if (navbar) {
+      const filtersHeight = document.querySelector(".filters").offsetHeight
       const bannerHeight = document.querySelector('.home-background').offsetHeight;
-      const filters = document.querySelector('.filters');
-      const filtersHeight = filters.offsetHeight;
-      
-      const limit = bannerHeight - filtersHeight
-      console.log(bannerHeight)
+      console.log(filtersHeight)
       window.addEventListener('scroll', (e) => {
-        if (window.scrollY >= bannerHeight) {
+        if (window.scrollY >= bannerHeight + filtersHeight * 2) {
           console.log(bannerHeight)
           navbar.classList.add("normal");
           navbar.classList.remove("transparent");
+
         } else {
           navbar.classList.add("transparent");
           navbar.classList.remove("normal");

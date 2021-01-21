@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
-        <div class="first-image">
+        <div class="first-image mt-3">
           <%= cl_image_tag @project.photos.first.key %>
         </div>
         <div class="project-details">
@@ -21,16 +21,13 @@
     <div class="col-12 col-lg-12 col-md-12">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <% @project.photos.count.times do %>
+          <% (@project.photos.count - 1).times do %>
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <% end %>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%= cl_image_tag @project.photos[1].key, class:"d-block w-100" %>
-          </div> 
-          <%= @project.photos[2..-1].each do |photo| %>
-            <div class="carousel-item">
+          <%= @project.photos[1..-1].each_with_index do |photo, i| %>
+            <div class="carousel-item <%= "active" if i == 1 %>">
               <%= cl_image_tag photo.key, class:"d-block w-100" %>
             </div>
           <% end %>
