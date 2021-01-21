@@ -6,10 +6,6 @@
     flex-direction: column;
   } 
 
-  h1 {
-    
-  }
-
   .subtitle {
     margin-bottom: 0;
     color: $subtitle-color;
@@ -39,7 +35,8 @@
   text-decoration: none;
   margin-left: 48px;
   transition: all 0.3s ease;
-  
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+  ;
   &:hover {
     opacity: 1;
     transition: all 0.3s ease;
@@ -58,7 +55,9 @@
 .transparent {
   background: transparent;
 }
-
+.title-cont a {
+  text-decoration: none;
+}
 .normal {
   background: $primary-background;
 }
