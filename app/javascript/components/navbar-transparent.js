@@ -2,7 +2,6 @@ const initNavbar = () => {
 
   if (document.querySelector("#projects-index")) {
     const navbar = document.querySelector('.navbar-lewagon');
-    
     if (navbar) {
       const filtersHeight = document.querySelector(".filters").offsetHeight
       const bannerHeight = document.querySelector('.home-background').offsetHeight;

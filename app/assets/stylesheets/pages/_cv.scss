@@ -1,21 +1,19 @@
-// .background {
-//   background-image: url("cv_background.jpg");
-//   background-repeat: no-repeat;
-//   background-position: left;
-//   height: 100%;
-//   -webkit-filter: blur(5px);
-//   -moz-filter: blur(5px);
-//   -o-filter: blur(5px);
-//   -ms-filter: blur(5px);
-//   filter: blur(5px);
-// }
-
-
+h1.cv {
+  color: white;
+  font-weight: bold;
+  text-shadow: 4px 4px grey;
+  margin: 0;
+  margin-left: 88px;
+}
 .cv-part {
   display: flex;
+  margin-bottom: 42px;
 
   h2.year {
     padding-right: 16px;
+  }
+  .year {
+    width: 88px;
   }
   
   .content {
@@ -26,17 +24,40 @@
     font-size: 14px;
     letter-spacing: 1.8px;
     padding-left: 16px;
-    color: $nav-items-color;
+
+    h2 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    p {
+      color: $subtitle-color;
+    }
   }
 }
 
 .cv {
+  margin-top: 124px;
   background-size: 80%;
   backdrop-filter: blur(10px);
 }
 
 .background {
+  background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1611848550/cv_background.jpg");
   background-repeat: no-repeat;
   background-position: right bottom 50%;
-  background-image: url("cv_background.jpg");
+}
+
+.cv-title {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 32px;
+
+  a {
+    margin-left: 48px;
+    color: $subtitle-color;
+    text-decoration:underline;
+    font-family: $primary-font;
+    font-weight: bold;
+  }
 }
