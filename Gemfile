@@ -37,7 +37,6 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'bootstrap', '~> 4.1.1'
 gem 'rails_admin', '~> 2.0'
 gem 'friendly_id', '~> 5.4.0'
-gem 'pg_search'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

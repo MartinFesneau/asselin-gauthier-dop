@@ -1,0 +1,42 @@
+// .background {
+//   background-image: url("cv_background.jpg");
+//   background-repeat: no-repeat;
+//   background-position: left;
+//   height: 100%;
+//   -webkit-filter: blur(5px);
+//   -moz-filter: blur(5px);
+//   -o-filter: blur(5px);
+//   -ms-filter: blur(5px);
+//   filter: blur(5px);
+// }
+
+
+.cv-part {
+  display: flex;
+
+  h2.year {
+    padding-right: 16px;
+  }
+  
+  .content {
+    // border-left: 1px solid white;
+    margin-left: 16px;
+    font-family: $primary-font;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1.8px;
+    padding-left: 16px;
+    color: $nav-items-color;
+  }
+}
+
+.cv {
+  background-size: 80%;
+  backdrop-filter: blur(10px);
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: right bottom 50%;
+  background-image: url("cv_background.jpg");
+}
