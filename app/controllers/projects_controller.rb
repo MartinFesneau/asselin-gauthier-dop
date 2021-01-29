@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index_clips, :index_commercials, :show]
+  skip_before_action :authenticate_user!, only: [:show, :index]
 
   def new
     @project = Project.new
