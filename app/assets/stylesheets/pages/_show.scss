@@ -17,7 +17,6 @@
   .bold {
     color: $primary-color;
     font-weight: bold;
-    margin-left: 12px;
   }
 
   p {
@@ -29,21 +28,24 @@
     
   }
 
-  .artist-details {
-    display: flex;
-    justify-content: space-between;
-
-    .artist {
-      margin-right: 24px;
-    }
-  }
-
-  .prod-details {
-    display: flex;
-    justify-content: space-between;
+  @media (min-width: 577px) {
     
-    .prod {
-      margin-left: 48px;
+    .artist-details {
+      display: flex;
+      justify-content: space-between;
+      
+      .artist {
+        margin-right: 24px;
+      }
+    }
+    
+    .prod-details {
+      display: flex;
+      justify-content: space-between;
+      
+      .prod {
+        margin-left: 48px;
+      }
     }
   }
 }

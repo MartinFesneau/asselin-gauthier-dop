@@ -16,10 +16,20 @@ const initNavbar = () => {
     //   });
     // }
 
-    const filtersBar = document.querySelector(".filters");
-    
+    const title = document.querySelector("#logo")
+    const bannerHeight = document.querySelector('.home-background').offsetHeight;
+    window.addEventListener('scroll', (e) => {
+          if (window.scrollY >= bannerHeight) {
+            title.style.display = "block"
+            title.style.opacity = "1"
 
-  }
+          } else {
+            title.style.display = "none"
+            title.style.opacity = "0"
+          }
+        });
+      }
+    
 }
 
 export { initNavbar }

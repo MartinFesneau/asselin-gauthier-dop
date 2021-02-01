@@ -1,17 +1,16 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
-        <div class="first-image mt-3">
+        <div class="first-image">
           <%= cl_image_tag @project.photos.first.key %>
         </div>
         <div class="project-details">
           <div class="artist-details">
-            <p class="artist bold"><%= @project.artist.upcase %></p>
-            <p class="project"><%= @project.name %></p>
+            <p class="artist"><span class="bold mr-3"><%= @project.artist.upcase %></span> <%= @project.name %></p>
           </div>
           <div class="prod-details">
-            <p class="real">Réalisé par <span class="bold"><%= @project.director.upcase %></span></p>
-            <p class="prod">Produit par <span class="bold"><%= @project.producer.upcase %></span></p>
+            <p class="real">Réalisé par <span class="bold ml-2"><%= @project.director.upcase %></span></p>
+            <p class="prod">Produit par <span class="bold ml-2"><%= @project.producer.upcase %></span></p>
           </div>
         </div>    
     </div>

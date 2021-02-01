@@ -5,12 +5,14 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
-      <div id="anchor"></div>
+      <div id="projects"></div>
+      <div class="logo">
+      </div>
       <div class="filters fixed">
-          <%= link_to "ALL", projects_path(anchor: "anchor"), class: "#{"active" if params[:category].nil?}" %>
-          <%= link_to "CLIPS", projects_path(category: "clip", anchor: "anchor"), class: "#{"active" if params[:category] == "clip"}" %>
-          <%= link_to "COMMERCIALS", projects_path(category: "pub", anchor: "anchor"), class: "#{"active" if params[:category] == "pub"}"%>
-          <%= link_to "REEL", projects_path(category: "reel", anchor: "anchor"), class: "#{"active" if params[:category] == "reel"}"%>
+          <%= link_to "ALL", projects_path(anchor: "projects"), class: "#{"active" if params[:category].nil?}" %>
+          <%= link_to "CLIPS", projects_path(category: "clip", anchor: "projects"), class: "#{"active" if params[:category] == "clip"}" %>
+          <%= link_to "COMMERCIALS", projects_path(category: "pub", anchor: "projects"), class: "#{"active" if params[:category] == "pub"}"%>
+          <%= link_to "REEL", projects_path(category: "reel", anchor: "projects"), class: "#{"active" if params[:category] == "reel"}"%>
       </div>
 
       <div class="projects" id="projects">
