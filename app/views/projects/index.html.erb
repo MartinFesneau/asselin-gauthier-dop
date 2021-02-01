@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
       <div id="anchor"></div>
-      <div class="filters">
+      <div class="filters fixed">
           <%= link_to "ALL", projects_path(anchor: "anchor"), class: "#{"active" if params[:category].nil?}" %>
           <%= link_to "CLIPS", projects_path(category: "clip", anchor: "anchor"), class: "#{"active" if params[:category] == "clip"}" %>
           <%= link_to "COMMERCIALS", projects_path(category: "pub", anchor: "anchor"), class: "#{"active" if params[:category] == "pub"}"%>

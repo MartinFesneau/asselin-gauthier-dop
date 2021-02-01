@@ -34,3 +34,8 @@ a {
 .page-content {
   min-height: calc(100vh - 72px);
 }
+
+.fixed {
+  position: sticky;
+  top: 0;
+}

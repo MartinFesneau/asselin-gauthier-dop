@@ -1,20 +1,28 @@
 .navbar-lewagon {
   width: 100%;
   z-index: 10;
-  // position: absolute;
+  position: absolute;
   top: 0;
-  .title {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  h1.title {
+
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 29px;
+    margin-top: 16px;
+    margin-bottom: 0;
   } 
 
   .subtitle {
     margin-bottom: 0;
-    color: $subtitle-color;
+    color: white;
+    opacity: 0.6;
     font-family: $primary-font;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
-    font-weight: $light-bold;
+    font-weight: lighter;
   }
 }
 
@@ -29,8 +37,8 @@
 .nav-item a {
   color: $nav-items-color;
   font-family: $primary-font;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: lighter;
   letter-spacing: 1.17px;
   line-height: 22px;
   opacity: 0.6;
@@ -64,7 +72,3 @@
   background: $primary-background;
 }
 
-.fixed {
-  position: fixed;
-  transition: all 0.5s ease;
-}

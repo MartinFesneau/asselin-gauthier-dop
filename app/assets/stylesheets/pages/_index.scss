@@ -5,22 +5,26 @@
   z-index: 0;
 }
 .projects {
-  padding-top: 48px;
+  // padding-top: 48px;
 }
 .filters {
   display: flex;
   justify-content: space-between;
-  // background-color: $primary-background;
-  // padding: 48px 144px;
+  background-color: $primary-background;
+
   padding-top: 48px;
   padding-left: 144px;
   padding-right: 144px;
+  padding-bottom: 48px;
+  margin-right: -2px;
+  margin-left: -2px;
+  z-index: 9;
   
   a {
     
     color: $nav-items-color;
     font-family: $primary-font;
-    font-weight: $light-bold;
+    font-weight: lighter;
     letter-spacing: 2px;
     line-height: 24px;
     font-size: 20px;
@@ -53,7 +57,6 @@
     margin: 16px;
     margin-bottom: 0;
     padding: 0;
-
   }
   .navbar-lewagon .subtitle {
   font-size: 11px !important;
