@@ -1,4 +1,4 @@
-<div class="mb-3 navbar navbar-expand-sm navbar-light navbar-lewagon <%= params[:action] == 'index' ? "transparent" : "normal" %>">
+<div class="mb-3 navbar navbar-expand-sm navbar-light navbar-lewagon <%= params[:action] == 'index' || params[:action] == 'contact' ? "transparent" : "normal" %>">
   <div class="container-fluid">
     <div class="title-cont">
       <%= link_to root_path, class:"active" do  %>
@@ -22,7 +22,7 @@
           <%= link_to "HOME", root_path  %>
         </li>
         <li class="nav-item">
-          <%= link_to "PROJETS", root_path(anchor: "projects") %>
+          <%= link_to "PROJETS", root_path(anchor: "anchor") %>
         </li>
         <li class="nav-item">
           <%= link_to "CONTACT", contact_path %>

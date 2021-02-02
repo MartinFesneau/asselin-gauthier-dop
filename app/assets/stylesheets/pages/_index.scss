@@ -4,9 +4,7 @@
   width: 100%;
   z-index: 0;
 }
-.projects {
-  // padding-top: 48px;
-}
+
 .filters {
   display: flex;
   justify-content: space-between;
@@ -73,10 +71,10 @@
     }
   }
 
-  .home-background img {
-    height: 100%;
-    width: 100hv;
-  }
+  // .home-background img {
+  //   height: 100%;
+  //   width: 100hv;
+  // }
 
   .project-details {
     flex-direction: column;
@@ -85,4 +83,23 @@
   .artist {
     margin-left: 0;
   }
+
+
+  .cv-title {
+    flex-direction: column;
+    
+    h1.cv {
+      margin-left: 0;
+    }
+  }
+
+  .cv-title a {
+    margin-left: 0;
+  }
+
+  .contact-background, .home-background {
+    background-position: center;
+  }
+
+  
 }
