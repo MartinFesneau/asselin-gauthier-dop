@@ -1,4 +1,4 @@
-.home-background img {
+.home-background {
   // background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1611053542/vlc_2021-01-19_10-05-55_rhxsrj.jpg");
   height: 100vh;
   width: 100%;
@@ -97,8 +97,12 @@
     margin-left: 0;
   }
 
-  .contact-background, .home-background {
-    background-position: center;
+  .contact-background {
+    background-position: center left 90%;
+  }
+
+  .home-background {
+    background-position: left 61% top 7%;
   }
 
   
