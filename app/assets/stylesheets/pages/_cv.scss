@@ -17,7 +17,6 @@ h1.cv {
   }
   
   .content {
-    // border-left: 1px solid white;
     margin-left: 16px;
     font-family: $primary-font;
     font-weight: 300;
@@ -32,6 +31,8 @@ h1.cv {
 
     p {
       color: $subtitle-color;
+      text-shadow: 1px 1px 1px rgba(white, 0.2);
+      margin-bottom: 4px;
     }
   }
 }
@@ -39,13 +40,14 @@ h1.cv {
 .cv {
   margin-top: 124px;
   background-size: 80%;
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
 }
 
-.background {
+.cv-background {
   background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1611848550/cv_background.jpg");
   background-repeat: no-repeat;
-  background-position: right bottom 50%;
+  background-position: right bottom;
+  height: auto;
 }
 
 .cv-title {

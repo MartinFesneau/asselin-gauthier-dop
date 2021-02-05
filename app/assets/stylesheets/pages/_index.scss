@@ -1,5 +1,4 @@
 .home-background {
-  // background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1611053542/vlc_2021-01-19_10-05-55_rhxsrj.jpg");
   height: 100vh;
   width: auto;
   background-position: center;
@@ -31,7 +30,6 @@
     transition: 0.3s all ease; 
 
     &:hover {
-      // -webkit-text-stroke: 1px;
       opacity: 1;
       transition: 0.3s all ease; 
     }   
@@ -39,12 +37,16 @@
 }
 
 .active {
-  // -webkit-text-stroke: 1px;
   opacity: 1 !important;
 }
 
 
 @media(max-width: 576px) {
+
+  .cv-background {
+    background-position: right bottom 50%;
+  }
+
   .filters {
     flex-direction: column;
     align-items: flex-start;
@@ -108,6 +110,4 @@
   .contact-content {
     margin-left: 0;
   }
-
-  
 }
