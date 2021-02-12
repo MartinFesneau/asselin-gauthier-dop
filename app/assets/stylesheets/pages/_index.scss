@@ -1,7 +1,7 @@
 .home-background {
   height: 100vh;
   width: auto;
-  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .filters {
@@ -9,10 +9,10 @@
   justify-content: space-between;
   background-color: $primary-background;
 
-  padding-top: 48px;
+  padding-top: 36px;
   padding-left: 144px;
   padding-right: 144px;
-  padding-bottom: 48px;
+  padding-bottom: 36px;
   margin-right: -2px;
   margin-left: -2px;
   z-index: 9;
@@ -24,7 +24,7 @@
     font-weight: lighter;
     letter-spacing: 2px;
     line-height: 24px;
-    font-size: 20px;
+    font-size: 14px;
     text-decoration: none;
     opacity: 0.6;
     transition: 0.3s all ease; 
@@ -45,15 +45,19 @@
 
   .cv-background {
     background-position: right bottom 50%;
+    background-size: cover;
   }
 
   .filters {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 24px;
     margin-top: 24px;
     padding: 0;
 
+    a {
+      font-size: 12px;
+    }
   }
   .navbar-lewagon .subtitle {
   font-size: 11px !important;
@@ -69,7 +73,7 @@
 
     .content {
       opacity: 0.7;
-      font-size: 1em;
+      font-size: 10px;
     }
   }
 
@@ -100,14 +104,41 @@
   }
 
   .contact-background {
-    background-position: center;
+    background-position: left 50% top 20%;
+    background-size: auto;
   }
 
   .home-background {
-    background-position: left 61% top 7%;
+    background-position: left 40% top 24%;
+    background-image: url('https://res.cloudinary.com/siteasselin/image/upload/v1613143949/2_1_wtmrt3.jpg');
   }
 
   .contact-content {
     margin-left: 0;
   }
+
+  .title-cont {
+    flex-direction: column;
+
+    h1.title {
+      // color: black;
+    }
+    
+  
+    .subtitle {
+      margin-left: 0;
+      // color: black;
+    }
+  }
 }
+
+@media(min-width: 576px) {
+  .home-background {
+    background-size: contain;
+    background-image: url('https://res.cloudinary.com/siteasselin/image/upload/v1613143949/4_2_of21pf.jpg');
+  }
+
+  .contact-background {
+    background-size: cover;
+  }
+} 

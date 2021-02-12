@@ -3,7 +3,6 @@ h1.cv {
   font-weight: bold;
   text-shadow: 4px 4px grey;
   margin: 0;
-  margin-left: 88px;
 }
 .cv-part {
   display: flex;
@@ -40,14 +39,19 @@ h1.cv {
 .cv {
   margin-top: 124px;
   background-size: 80%;
-  // backdrop-filter: blur(10px);
 }
 
 .cv-background {
-  background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1611848550/cv_background.jpg");
+  // background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1613137722/cv_background_blur.jpg");
+  background-image: url("https://res.cloudinary.com/siteasselin/image/upload/v1613138149/Sans_titre-1_earvvw.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
   height: auto;
+  z-index: 1;
+}
+
+.cv-filter {
+  backdrop-filter: blur(10px);
 }
 
 .cv-title {

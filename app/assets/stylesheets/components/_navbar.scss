@@ -6,7 +6,7 @@
   display: flex;
   h1.title {
     color: $primary-color;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 29px;
@@ -15,13 +15,15 @@
   } 
 
   .subtitle {
+    margin-left: 8px;
     margin-bottom: 0;
     color: white;
     opacity: 0.6;
     font-family: $primary-font;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 19px;
     font-weight: lighter;
+    letter-spacing: 2px;
   }
 }
 
@@ -36,9 +38,9 @@
 .nav-item a {
   color: $nav-items-color;
   font-family: $primary-font;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: lighter;
-  letter-spacing: 1.17px;
+  letter-spacing: 2px;
   line-height: 22px;
   opacity: 0.6;
   text-decoration: none;
@@ -71,3 +73,7 @@
   background: $primary-background;
 }
 
+.title-cont {
+  display: flex;
+  align-items: baseline;
+}

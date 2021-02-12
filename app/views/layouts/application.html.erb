@@ -20,6 +20,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag %>
   </head>
 
   <body id="<%= controller_name %>-<%= action_name %>">
@@ -32,8 +33,8 @@
       <%= yield %>
     </div>
     
-    <% if params[:action] != "contact" %>
-      <%= render 'shared/footer' %>
-    <% end %>
+    <%# <% if params[:action] != "contact" %>
+      <%# <%= render 'shared/footer' %>
+    <%# <% end %> 
   </body>
 </html>
