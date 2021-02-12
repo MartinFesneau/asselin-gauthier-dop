@@ -72,8 +72,7 @@
     height: 156px;
 
     .content {
-      opacity: 0.7;
-      font-size: 10px;
+      display: none;
     }
   }
 
@@ -109,7 +108,7 @@
   }
 
   .home-background {
-    background-position: left 40% top 24%;
+    background-position: left 40% top 25%;
     background-image: url('https://res.cloudinary.com/siteasselin/image/upload/v1613143949/2_1_wtmrt3.jpg');
   }
 
