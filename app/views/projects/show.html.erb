@@ -1,21 +1,24 @@
 <div class="container mt-5">
+
+  <%# premiere photo %>
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
-        <div class="first-image">
-          <%= cl_image_tag @project.photos.first.key %>
+      <div class="first-image">
+        <%= cl_image_tag @project.photos.first.key %>
+      </div>
+      <div class="project-details">
+        <div class="artist-details">
+          <p class="artist"><span class="bold mr-3"><%= @project.artist.upcase %></span> <%= @project.name %></p>
         </div>
-        <div class="project-details">
-          <div class="artist-details">
-            <p class="artist"><span class="bold mr-3"><%= @project.artist.upcase %></span> <%= @project.name %></p>
-          </div>
-          <div class="prod-details">
-            <p class="real">Directed by <span class="bold ml-2"><%= @project.director.upcase %></span></p>
-            <p class="prod">Produced by <span class="bold ml-2"><%= @project.producer.upcase %></span></p>
-          </div>
-        </div>    
+        <div class="prod-details">
+          <p class="real">Directed by <span class="bold ml-2"><%= @project.director.upcase %></span></p>
+          <p class="prod">Produced by <span class="bold ml-2"><%= @project.producer.upcase %></span></p>
+        </div>
+      </div>    
     </div>
   </div>
-  
+
+  <%# carousel %>
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -25,7 +28,7 @@
           <% end %>
         </ol>
         <div class="carousel-inner">
-          <%= @project.photos[1..-1].each_with_index do |photo, i| %>
+          <% @project.photos[1..-1].each_with_index do |photo, i| %>
             <%= render "shared/carousel", photo: photo, i: i %>
           <% end %>
         </div>
@@ -42,16 +45,18 @@
     </div>
   </div>
 
+  <%# video  %>
   <div class="embed-responsive embed-responsive-<%= @project.format %> mb-4">
     <iframe src="<%= @project.url %>" allowfullscreen></iframe>
   </div>
 
+  <%# edit and delete button %>
   <% if user_signed_in? && current_user.admin? %>
     <div class="row flex-column align-items-center">
       <%= link_to "Edit this project", edit_project_path(@project.id), class: "btn btn-secondary"  %>
       <%= link_to project_path(@project.id),
         method: :delete,
-        data: {confirm: "T'es sur gros ??"} do %>
+        data: {confirm: "T'es sur ??"} do %>
         <i class="fas fa-trash mt-4"></i>
         <% end %>
     </div>
