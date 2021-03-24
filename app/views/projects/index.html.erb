@@ -14,7 +14,7 @@
           <%= link_to "REEL", projects_path(category: "reel", anchor: "projects-anchor"), class: "#{"active" if params[:category] == "reel"}"%>
       </div>
 
-      <div class="projects" id="<%= "projects" if user_signed_in? && current_user.admin == true%>">
+      <div class="projects" id="<%= "projects" if user_signed_in? && current_user.admin %>">
         <% @projects.each do |project| %>
         <div data-id="<%= project.id %>">
           <%= render "projects/project", project: project %>
