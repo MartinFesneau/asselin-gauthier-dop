@@ -16,7 +16,8 @@ index = 1
     name: "project#{index}",
     artist: "artist project #{index}",
     director: "someone",
-    producer: "don't know")
+    producer: "don't know",
+    position: index)
   
   file = URI.open('https://source.unsplash.com/random/800x600')
   projet.photos.attach(io: file, filename: "cover", content_type: 'image/jpeg')

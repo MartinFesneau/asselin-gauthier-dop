@@ -16,10 +16,16 @@ class ProjectsController < ApplicationController
 
   def index 
     if params[:category].present?
-      @projects = Project.where(category: params[:category])
+      @projects = Project.where(category: params[:category]).order(:position)
     else
-      @projects = Project.all
+      @projects = Project.all.order(:position)
     end
+  end
+
+  def move_project
+    project = Project.find(params[:id])
+    new_position = params[:position].to_i
+    Project.change_position(project, new_position)
   end
 
   def show

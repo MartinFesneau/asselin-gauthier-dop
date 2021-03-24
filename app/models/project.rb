@@ -13,6 +13,29 @@ class Project < ApplicationRecord
 
 
   class << Project
+
+    def change_position(project, new_position)
+      return if project.position == new_position
+      new_position += 1 if new_position > project.position
+      projects = Project.where("position >= ?", new_position).order(:position)
+      projects.update_all("position = position + 1")
+      project.update(position: new_position)
+      fix_positions_for_column(project)
+    end
+
+    def fix_positions_for_column(project)
+      projects = Project.order(:position)
+                  .select("id, position, ROW_NUMBER() OVER(ORDER BY position) AS new_position")
+                  .to_sql
+      query = <<~SQL
+        UPDATE projects AS before
+        SET position = new_position
+        FROM (#{projects}) AS after
+        WHERE before.id = after.id;
+      SQL
+      ActiveRecord::Base.connection.execute(query)
+    end
+
     def regexpify(url)
       # delete the channel part of the youtube url if necessary, maybe possible to do it in the regexp
       if url.include?"&"

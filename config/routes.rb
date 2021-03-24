@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/contact", to: 'pages#contact'
   get "/cv", to: 'pages#cv'
 
+  patch 'move_project', to: 'projects#move_project'
   resources :projects
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
