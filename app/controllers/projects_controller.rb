@@ -1,19 +1,6 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
-
-  def new
-    @project = Project.new
-  end
-
-  def create
-    @project = Project.new(project_params)
-    if @project.save
-      redirect_to project_path(@project)
-    else
-      render :new
-    end
-  end
-
+  
   def index 
     if params[:category].present?
       @projects = Project.where(category: params[:category]).order(:position)
@@ -21,6 +8,22 @@ class ProjectsController < ApplicationController
       @projects = Project.all.order(:position)
     end
   end
+
+  def new
+    @project = Project.new
+  end
+
+  def create
+    @projects = Project.all
+    @project = Project.new(project_params)
+    @project.position = @projects.length + 1
+    if @project.save
+      redirect_to project_path(@project)
+    else
+      render :new
+    end
+  end
+
 
   def move_project
     project = Project.find(params[:id])
