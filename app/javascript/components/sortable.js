@@ -9,7 +9,6 @@ const initSortable = () => {
     var options = {
       animation: 100,
       onEnd: (evt) => {
-        console.log(evt)
         fetch("/move_project", {
           method: "PATCH",
           headers: {
