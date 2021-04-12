@@ -33,7 +33,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.friendly.find(params[:id])
-    @project.url = Project.urlify(@project.url)
+    @project.url = Project.urlify(@project.url) unless @project.url = ""
   end
 
   def edit

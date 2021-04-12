@@ -46,9 +46,11 @@
   </div>
 
   <%# video  %>
-  <div class="embed-responsive embed-responsive-<%= @project.format %> mb-4">
-    <iframe src="<%= @project.url %>" allowfullscreen></iframe>
-  </div>
+  <% unless @project.url == "" %>
+    <div class="embed-responsive embed-responsive-<%= @project.format %> mb-4">
+      <iframe src="<%= @project.url %>" allowfullscreen></iframe>
+    </div>
+  <% end %>
 
   <%# edit and delete button %>
   <% if user_signed_in? && current_user.admin? %>
