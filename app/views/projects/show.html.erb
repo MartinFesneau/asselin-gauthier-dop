@@ -46,7 +46,7 @@
   </div>
 
   <%# video  %>
-  <% unless @project.url == "" %>
+  <% if @project.url != "" %>
     <div class="embed-responsive embed-responsive-<%= @project.format %> mb-4">
       <iframe src="<%= @project.url %>" allowfullscreen></iframe>
     </div>
