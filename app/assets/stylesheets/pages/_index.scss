@@ -76,10 +76,9 @@
     }
   }
 
-  // .home-background img {
-  //   height: 100%;
-  //   width: 100hv;
-  // }
+  .details {
+    text-align: center;
+  }
 
   .project-details {
     flex-direction: column;
@@ -119,11 +118,6 @@
 
   .title-cont {
     flex-direction: column;
-
-    h1.title {
-      // color: black;
-    }
-    
   
     .subtitle {
       margin-left: 0;
@@ -134,11 +128,11 @@
 
 @media(min-width: 576px) {
   .home-background {
-    background-size: cover;
+    background-size:auto;
     // 16:9
-    // background-image: url('https://res.cloudinary.com/siteasselin/image/upload/v1613143949/4_2_of21pf.jpg');
+    background-image: url('https://res.cloudinary.com/siteasselin/image/upload/v1618330906/home_background.jpg');
     // 2:35
-    background-image: url('https://res.cloudinary.com/siteasselin/image/upload/v1616591581/4_mblriw.jpg');
+    // background-image: url('https://res.cloudinary.com/siteasselin/image/upload/v1616591581/4_mblriw.jpg');
   }
 
   .contact-background {

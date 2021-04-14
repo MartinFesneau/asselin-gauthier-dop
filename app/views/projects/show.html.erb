@@ -6,13 +6,15 @@
       <div class="first-image">
         <%= cl_image_tag @project.photos.first.key %>
       </div>
-      <div class="project-details">
-        <div class="artist-details">
-          <p class="artist"><span class="bold mr-3"><%= @project.artist.upcase %></span> <%= @project.name %></p>
-        </div>
-        <div class="prod-details">
-          <p class="real">Directed by <span class="bold ml-2"><%= @project.director.upcase %></span></p>
-          <p class="prod">Produced by <span class="bold ml-2"><%= @project.producer.upcase %></span></p>
+      <div class="details">
+        <div class="project-details">
+          <div class="artist-details">
+            <p class="artist"><span class="bold mr-3"><%= @project.artist.upcase %></span> <%= @project.name %></p>
+          </div>
+          <div class="prod-details">
+            <p class="real">Directed by <span class="bold ml-2"><%= @project.director.upcase %></span></p>
+            <p class="prod">Produced by <span class="bold ml-2"><%= @project.producer.upcase %></span></p>
+          </div>
         </div>
       </div>    
     </div>
@@ -47,7 +49,7 @@
 
   <%# video  %>
   <% if @project.url != "" %>
-    <div class="embed-responsive embed-responsive-<%= @project.format %> mb-4">
+    <div class="embed-responsive embed-responsive-<%= @project.format %> mb-5">
       <iframe src="<%= @project.url %>" allowfullscreen></iframe>
     </div>
   <% end %>
