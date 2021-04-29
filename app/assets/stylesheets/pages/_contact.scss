@@ -43,3 +43,21 @@
 .mail:hover body {
   background-color: white;
 }
+
+.martin {
+  text-align: center;
+  display:inline-block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 29px;
+  color: black;
+  margin-top: 35rem;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
