@@ -1,5 +1,9 @@
-<%= link_to project_path(project), class: "project-link" do  %>
-  <div class="project-card" style="background-image: url('<%= cl_image_path project.photos.first&.key %>'), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));" data-aos="fade-up" >
+<%= link_to project_path(project), class: "project-link" do %>
+  <% if project.photos.any? %>
+    <div class="project-card" style="background-image: url('<%= cl_image_path project.photos.first.key %>'), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));" data-aos="fade-up" >
+  <% else %>
+    <div class="project-card" style="linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));" data-aos="fade-up" >
+  <% end %>
     <div class="content">
       <span><%= project.name.upcase %> / <%=  project.artist.upcase %></span>
     </div>
