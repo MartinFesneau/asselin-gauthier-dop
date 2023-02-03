@@ -11,7 +11,7 @@
           <%= link_to "ALL", projects_path(anchor: "projects-anchor"), class: "#{"active" if params[:category].nil?}" %>
           <%= link_to "CLIPS", projects_path(category: "clip", anchor: "projects-anchor"), class: "#{"active" if params[:category] == "clip"}" %>
           <%= link_to "COMMERCIALS", projects_path(category: "pub", anchor: "projects-anchor"), class: "#{"active" if params[:category] == "pub"}"%>
-          <%= link_to "REEL", projects_path(category: "reel", anchor: "projects-anchor"), class: "#{"active" if params[:category] == "reel"}"%>
+          <%= link_to "NARRATIVE", projects_path(category: "narrative", anchor: "projects-anchor"), class: "#{"active" if params[:category] == "narrative"}"%>
       </div>
 
       <div class="projects" id="<%= "projects" if user_signed_in? && current_user.admin %>">
