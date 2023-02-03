@@ -4,7 +4,9 @@
   <div class="row">
     <div class="col-12 col-lg-12 col-md-12">
       <div class="first-image">
+      <% if @project.photos.first&.key&.present? %>
         <%= cl_image_tag @project.photos.first.key %>
+      <% end %>
       </div>
       <div class="details">
         <div class="project-details">
