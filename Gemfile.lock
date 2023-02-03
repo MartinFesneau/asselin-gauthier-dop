@@ -343,7 +343,7 @@ DEPENDENCIES
   cloudinary (~> 1.16.0)
   devise
   dotenv-rails
-  font-awesome-sass
+  font-awesome-sass (~> 6.2.1)
   friendly_id (~> 5.4.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
