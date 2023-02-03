@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
   FORMAT = ["21by9", "16by9", "4by3", "1by1"]
-  CATEGORY = ["clip", "pub"]
+  CATEGORY = ["clip", "pub", 'narrative']
   validates :name, presence: true  
   validates :artist, presence: true  
   validates :format, presence: true
